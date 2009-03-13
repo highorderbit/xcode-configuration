@@ -81,26 +81,26 @@
 
 #pragma mark Table view methods
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tv
 {
     return 1;
 }
 
 // Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView
+- (NSInteger)tableView:(UITableView *)tv
  numberOfRowsInSection:(NSInteger)section
 {
     return 0;
 }
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView
+- (UITableViewCell *)tableView:(UITableView *)tv
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * CellIdentifier = @"Cell";
 
     UITableViewCell * cell =
-        [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        [tv dequeueReusableCellWithIdentifier:CellIdentifier];
 
     if (cell == nil) {
         cell =
@@ -114,7 +114,7 @@
     return cell;
 }
 
-- (void)          tableView:(UITableView *)tableView
+- (void)          tableView:(UITableView *)tv
     didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
@@ -127,7 +127,7 @@
 
 /*
 // Override to support conditional editing of the table view.
-- (BOOL)        tableView:(UITableView *)tableView
+- (BOOL)        tableView:(UITableView *)tv
     canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
@@ -137,7 +137,7 @@
 
 /*
 // Override to support editing the table view.
-- (void)     tableView:(UITableView *)tableView
+- (void)     tableView:(UITableView *)tv
     commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
      forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -156,7 +156,7 @@
 
 /*
 // Override to support rearranging the table view.
-- (void)     tableView:(UITableView *)tableView
+- (void)     tableView:(UITableView *)tv
     moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
            toIndexPath:(NSIndexPath *)toIndexPath
 {
@@ -165,7 +165,7 @@
 
 /*
 // Override to support conditional rearranging of the table view.
-- (BOOL)        tableView:(UITableView *)tableView
+- (BOOL)        tableView:(UITableView *)tv
     canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
